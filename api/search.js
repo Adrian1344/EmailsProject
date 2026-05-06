@@ -27,10 +27,18 @@ export default function handler(req, res) {
   }
 
   try {
-    // Carregar arquivo JSON com dados dos alunos
-    const filePath = path.join(process.cwd(), 'alunos2.json');
-    const fileContent = fs.readFileSync(filePath, 'utf-8');
-    const alunos = JSON.parse(fileContent);
+    // Carregar dados dos alunos
+    let alunos;
+
+    // Tentar ler da variável de ambiente (Vercel)
+    if (process.env.ALUNOS_JSON) {
+      alunos = JSON.parse(process.env.ALUNOS_JSON);
+    } else {
+      // Fallback para arquivo local (desenvolvimento)
+      const filePath = path.join(process.cwd(), 'alunos2.json');
+      const fileContent = fs.readFileSync(filePath, 'utf-8');
+      alunos = JSON.parse(fileContent);
+    }
 
     // Normalizar busca para case-insensitive e sem acentos
     const normalizeString = (str) => {
