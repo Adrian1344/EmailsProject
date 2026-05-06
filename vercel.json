@@ -3,11 +3,6 @@
   "buildCommand": "echo 'Build complete'",
   "framework": null,
   "public": true,
-  "functions": {
-    "api/search.js": {
-      "runtime": "nodejs18.x"
-    }
-  },
   "rewrites": [
     {
       "source": "/api/(.*)",
