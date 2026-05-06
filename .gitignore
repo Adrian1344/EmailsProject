@@ -4,6 +4,7 @@ alunos.json
 alunosLeft.json
 email's.pdf
 email's2.pdf
+
 # Variáveis de ambiente
 .env
 .env.local
@@ -30,7 +31,16 @@ build/
 .next/
 .vercel/
 
-# Python
+# Python (scripts locais - não necessários em produção)
+dev_server.py
+extract_emails_from_pdf.py
+verificar_alunos.py
+start_dev.sh
 __pycache__/
 *.py[cod]
 *$py.class
+*.egg-info/
+.pytest_cache/
+venv/
+env/
+.venv/

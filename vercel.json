@@ -1,19 +1,25 @@
 {
   "version": 2,
   "buildCommand": "echo 'Build complete'",
+  "framework": null,
   "public": true,
+  "functions": {
+    "api/search.js": {
+      "runtime": "nodejs18.x"
+    }
+  },
   "rewrites": [
     {
       "source": "/api/(.*)",
       "destination": "/api/$1"
     },
     {
-      "source": "/",
-      "destination": "/index.html"
+      "source": "/search",
+      "destination": "/search.html"
     },
     {
-      "source": "/:path*",
-      "destination": "/$1.html"
+      "source": "/",
+      "destination": "/index.html"
     }
   ],
   "headers": [
@@ -23,6 +29,19 @@
         {
           "key": "Cache-Control",
           "value": "no-cache, no-store, must-revalidate"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
         }
       ]
     }
