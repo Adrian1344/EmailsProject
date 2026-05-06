@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed-dim": "#a0c9ff",
+                    "on-primary-container": "#521800",
+                    "secondary-fixed-dim": "#a8c8fc",
+                    "outline-variant": "#e4beb1",
+                    "surface-container-highest": "#fadcd2",
+                    "secondary": "#405f8d",
+                    "primary": "#a73a00",
+                    "on-tertiary-fixed": "#001c37",
+                    "surface-container-low": "#fff1ec",
+                    "primary-fixed-dim": "#ffb59a",
+                    "surface-variant": "#fadcd2",
+                    "on-secondary-fixed-variant": "#264774",
+                    "on-primary-fixed": "#370e00",
+                    "error-container": "#ffdad6",
+                    "on-primary": "#ffffff",
+                    "secondary-container": "#abcbff",
+                    "primary-fixed": "#ffdbce",
+                    "on-surface": "#271812",
+                    "outline": "#8f7065",
+                    "inverse-primary": "#ffb59a",
+                    "tertiary": "#0061a6",
+                    "tertiary-fixed": "#d2e4ff",
+                    "surface": "#fff8f6",
+                    "surface-container-high": "#ffe2d8",
+                    "secondary-fixed": "#d5e3ff",
+                    "on-secondary": "#ffffff",
+                    "inverse-surface": "#3e2c26",
+                    "on-primary-fixed-variant": "#802a00",
+                    "on-background": "#271812",
+                    "surface-container": "#ffe9e2",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-container": "#355582",
+                    "on-tertiary-container": "#002d51",
+                    "on-error": "#ffffff",
+                    "inverse-on-surface": "#ffede7",
+                    "surface-dim": "#f1d4ca",
+                    "surface-tint": "#a73a00",
+                    "background": "#fff8f6",
+                    "surface-bright": "#fff8f6",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-container": "#0096fd",
+                    "on-tertiary-fixed-variant": "#00497f",
+                    "primary-container": "#ff5c00",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed": "#001c3b",
+                    "on-surface-variant": "#5b4137",
+                    "on-error-container": "#93000a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "xs": "4px",
+                    "gutter": "16px",
+                    "md": "16px",
+                    "container-margin": "20px",
+                    "base": "4px",
+                    "lg": "24px",
+                    "sm": "8px",
+                    "xl": "32px"
+            },
+            "fontFamily": {
+                    "body-sm": ["Inter"],
+                    "button": ["Inter"],
+                    "label-caps": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "h1": ["Inter"],
+                    "h2": ["Inter"]
+            },
+            "fontSize": {
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "button": ["16px", {"lineHeight": "20px", "fontWeight": "600"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "h1": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "h2": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .copy-feedback {
+            color: #39D542;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background font-body-lg text-on-background min-h-screen">
+<!-- TopAppBar -->
+<header class="bg-slate-900 dark:bg-slate-950 flex items-center justify-between px-5 h-16 w-full fixed top-0 z-50 border-b border-slate-800 shadow-sm">
+<div class="flex items-center gap-4">
+<button class="text-white hover:bg-slate-800 transition-colors p-2 rounded-lg">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="text-white font-bold text-xl tracking-tight">School Email Lookup</h1>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex gap-6 mr-6">
+<a class="text-white font-['Inter'] font-semibold text-lg tracking-tight hover:bg-slate-800 transition-colors px-3 py-1 rounded-md" href="#">Search</a>
+<a class="text-slate-400 font-['Inter'] font-semibold text-lg tracking-tight hover:bg-slate-800 transition-colors px-3 py-1 rounded-md" href="#">History</a>
+</div>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-orange-500 active:opacity-80 transition-all cursor-pointer">
+<img class="w-full h-full object-cover" data-alt="professional male portrait with friendly expression in a brightly lit office setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACnoY0yvoi4Jt0f6_Hnzx8qVV4ioS__k625iQQU_BHtsNhTGcr1M3zfaU26gKnrJ9-C05Vq-7KJODdZZ671RrZWQo6u8HzMCLYcUtbB17uK22LuH7uCUxN9MNI2wBi7z7gsTLpzzkC95XMXUlOWI0odvXE7IXfRlB4VLvDK-w4JFpaT6or7LysMnnPCOqEE3S4-UesEWTr3yUHAyUpLzq7aRk_-_MWRTx6WD1EUadoAvxRt0gRNhPTvxofEMndwjMqMnrJOcoieAc"/>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-24 pb-28 px-container-margin max-w-4xl mx-auto">
+<!-- Search Criteria Summary Header -->
+<section class="mb-lg">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 bg-surface-container p-lg rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] border border-outline-variant/30">
+<div>
+<span class="font-label-caps text-label-caps text-on-surface-variant block mb-1">SEARCH RESULTS FOR</span>
+<h2 class="font-h1 text-h1 text-on-surface">"Computer Science"</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Found 12 students in Batch 2024</p>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-3 py-1 bg-secondary-fixed text-on-secondary-fixed-variant rounded-full font-label-caps text-[11px]">
+<span class="material-symbols-outlined text-[14px] mr-1">school</span>
+                        Undergraduate
+                    </span>
+<span class="inline-flex items-center px-3 py-1 bg-secondary-fixed text-on-secondary-fixed-variant rounded-full font-label-caps text-[11px]">
+<span class="material-symbols-outlined text-[14px] mr-1">calendar_today</span>
+                        Year 3
+                    </span>
+</div>
+</div>
+</section>
+<!-- Results List -->
+<div class="space-y-4">
+<!-- Result Card 1 -->
+<article class="bg-white rounded-xl p-lg shadow-[0_4px_12px_rgba(0,0,0,0.05)] border border-transparent hover:border-primary-container transition-all group">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-gutter">
+<div class="flex items-center gap-md">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-h2 shrink-0">
+                            JD
+                        </div>
+<div>
+<h3 class="font-h2 text-h2 text-on-surface group-hover:text-primary transition-colors">Jane Doe</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Class of 2024 • Computer Science</p>
+</div>
+</div>
+<div class="flex flex-col md:items-end gap-2">
+<div class="flex items-center gap-2">
+<span class="font-mono text-primary font-bold text-body-lg">jane.doe@university.edu</span>
+</div>
+<div class="flex items-center justify-between md:justify-end gap-4">
+<span class="copy-feedback font-label-caps text-label-caps hidden">
+<span class="material-symbols-outlined text-sm align-middle mr-1">check_circle</span>
+                                Copiado!
+                            </span>
+<button class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary-container text-on-primary hover:opacity-90 active:scale-95 transition-all rounded-lg font-button text-button w-full md:w-auto">
+<span class="material-symbols-outlined" data-icon="content_copy">content_copy</span>
+                                Copy Email
+                            </button>
+</div>
+</div>
+</div>
+</article>
+<!-- Result Card 2 -->
+<article class="bg-white rounded-xl p-lg shadow-[0_4px_12px_rgba(0,0,0,0.05)] border border-transparent hover:border-primary-container transition-all group">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-gutter">
+<div class="flex items-center gap-md">
+<div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary font-bold text-h2 shrink-0">
+                            MS
+                        </div>
+<div>
+<h3 class="font-h2 text-h2 text-on-surface group-hover:text-primary transition-colors">Marcus Sterling</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Class of 2024 • Computer Science</p>
+</div>
+</div>
+<div class="flex flex-col md:items-end gap-2">
+<div class="flex items-center gap-2">
+<span class="font-mono text-primary font-bold text-body-lg">m.sterling@university.edu</span>
+</div>
+<div class="flex items-center justify-between md:justify-end gap-4">
+<span class="copy-feedback font-label-caps text-label-caps hidden">
+<span class="material-symbols-outlined text-sm align-middle mr-1">check_circle</span>
+                                Copiado!
+                            </span>
+<button class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary-container text-on-primary hover:opacity-90 active:scale-95 transition-all rounded-lg font-button text-button w-full md:w-auto">
+<span class="material-symbols-outlined" data-icon="content_copy">content_copy</span>
+                                Copy Email
+                            </button>
+</div>
+</div>
+</div>
+</article>
+<!-- Result Card 3 (Simulating Copied State) -->
+<article class="bg-white rounded-xl p-lg shadow-[0_4px_12px_rgba(0,0,0,0.05)] border border-primary-container transition-all group">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-gutter">
+<div class="flex items-center gap-md">
+<div class="w-12 h-12 rounded-full bg-tertiary/10 flex items-center justify-center text-tertiary font-bold text-h2 shrink-0">
+                            AA
+                        </div>
+<div>
+<h3 class="font-h2 text-h2 text-on-surface group-hover:text-primary transition-colors">Alice Aris</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Class of 2024 • Computer Science</p>
+</div>
+</div>
+<div class="flex flex-col md:items-end gap-2">
+<div class="flex items-center gap-2">
+<span class="font-mono text-primary font-bold text-body-lg">a.aris@university.edu</span>
+</div>
+<div class="flex items-center justify-between md:justify-end gap-4">
+<span class="copy-feedback font-label-caps text-label-caps flex items-center">
+<span class="material-symbols-outlined text-sm align-middle mr-1" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                Copiado!
+                            </span>
+<button class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-slate-200 text-slate-500 rounded-lg font-button text-button w-full md:w-auto cursor-not-allowed">
+<span class="material-symbols-outlined" data-icon="content_copy">content_copy</span>
+                                Copy Email
+                            </button>
+</div>
+</div>
+</div>
+</article>
+<!-- Result Card 4 -->
+<article class="bg-white rounded-xl p-lg shadow-[0_4px_12px_rgba(0,0,0,0.05)] border border-transparent hover:border-primary-container transition-all group">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-gutter">
+<div class="flex items-center gap-md">
+<div class="w-12 h-12 rounded-full bg-on-secondary-container/10 flex items-center justify-center text-on-secondary-container font-bold text-h2 shrink-0">
+                            RL
+                        </div>
+<div>
+<h3 class="font-h2 text-h2 text-on-surface group-hover:text-primary transition-colors">Robert Lowson</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Class of 2024 • Computer Science</p>
+</div>
+</div>
+<div class="flex flex-col md:items-end gap-2">
+<div class="flex items-center gap-2">
+<span class="font-mono text-primary font-bold text-body-lg">r.lowson@university.edu</span>
+</div>
+<div class="flex items-center justify-between md:justify-end gap-4">
+<span class="copy-feedback font-label-caps text-label-caps hidden">
+<span class="material-symbols-outlined text-sm align-middle mr-1">check_circle</span>
+                                Copiado!
+                            </span>
+<button class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary-container text-on-primary hover:opacity-90 active:scale-95 transition-all rounded-lg font-button text-button w-full md:w-auto">
+<span class="material-symbols-outlined" data-icon="content_copy">content_copy</span>
+                                Copy Email
+                            </button>
+</div>
+</div>
+</div>
+</article>
+</div>
+<!-- Load More Button -->
+<div class="mt-lg text-center">
+<button class="inline-flex items-center gap-2 px-6 py-3 border-2 border-slate-200 text-slate-700 hover:bg-slate-50 transition-colors rounded-full font-button text-button">
+                Show more results
+                <span class="material-symbols-outlined">expand_more</span>
+</button>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 h-20 pb-safe bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 shadow-[0_-4px_12px_rgba(0,0,0,0.05)] md:hidden">
+<a class="flex flex-col items-center justify-center text-[#FF5C00] font-bold active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">search</span>
+<span class="font-['Inter'] text-[12px] font-medium">Search</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 hover:text-[#FF5C00] transition-colors active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">history</span>
+<span class="font-['Inter'] text-[12px] font-medium">History</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 hover:text-[#FF5C00] transition-colors active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Inter'] text-[12px] font-medium">Profile</span>
+</a>
+</nav>
+</body></html>

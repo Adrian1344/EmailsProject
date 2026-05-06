@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed-dim": "#a0c9ff",
+                        "on-primary-container": "#521800",
+                        "secondary-fixed-dim": "#a8c8fc",
+                        "outline-variant": "#e4beb1",
+                        "surface-container-highest": "#fadcd2",
+                        "secondary": "#405f8d",
+                        "primary": "#a73a00",
+                        "on-tertiary-fixed": "#001c37",
+                        "surface-container-low": "#fff1ec",
+                        "primary-fixed-dim": "#ffb59a",
+                        "surface-variant": "#fadcd2",
+                        "on-secondary-fixed-variant": "#264774",
+                        "on-primary-fixed": "#370e00",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "secondary-container": "#abcbff",
+                        "primary-fixed": "#ffdbce",
+                        "on-surface": "#271812",
+                        "outline": "#8f7065",
+                        "inverse-primary": "#ffb59a",
+                        "tertiary": "#0061a6",
+                        "tertiary-fixed": "#d2e4ff",
+                        "surface": "#fff8f6",
+                        "surface-container-high": "#ffe2d8",
+                        "secondary-fixed": "#d5e3ff",
+                        "on-secondary": "#ffffff",
+                        "inverse-surface": "#3e2c26",
+                        "on-primary-fixed-variant": "#802a00",
+                        "on-background": "#271812",
+                        "surface-container": "#ffe9e2",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-container": "#355582",
+                        "on-tertiary-container": "#002d51",
+                        "on-error": "#ffffff",
+                        "inverse-on-surface": "#ffede7",
+                        "surface-dim": "#f1d4ca",
+                        "surface-tint": "#a73a00",
+                        "background": "#fff8f6",
+                        "surface-bright": "#fff8f6",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#0096fd",
+                        "on-tertiary-fixed-variant": "#00497f",
+                        "primary-container": "#ff5c00",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed": "#001c3b",
+                        "on-surface-variant": "#5b4137",
+                        "on-error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xs": "4px",
+                        "gutter": "16px",
+                        "md": "16px",
+                        "container-margin": "20px",
+                        "base": "4px",
+                        "lg": "24px",
+                        "sm": "8px",
+                        "xl": "32px"
+                    },
+                    "fontFamily": {
+                        "body-sm": ["Inter"],
+                        "button": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "h1": ["Inter"],
+                        "h2": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "button": ["16px", {"lineHeight": "20px", "fontWeight": "600"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "h1": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "h2": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .pb-safe { padding-bottom: env(safe-area-inset-bottom); }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #F5F7F9; /* As per Level 0 Guidance */
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-lg text-on-background">
+<!-- TopAppBar -->
+<header class="flex items-center justify-between px-5 h-16 w-full fixed top-0 z-50 bg-slate-900 dark:bg-slate-950 border-b border-slate-800 shadow-sm">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-orange-500 dark:text-orange-400 cursor-pointer active:opacity-80 transition-all">menu</span>
+<h1 class="text-white font-bold text-xl tracking-tight font-['Inter']">School Email Lookup</h1>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-slate-400 hover:bg-slate-800 transition-colors p-2 rounded-full cursor-pointer">search</span>
+<div class="w-8 h-8 rounded-full bg-slate-700 flex items-center justify-center border border-slate-600 overflow-hidden">
+<img alt="User profile avatar" class="w-full h-full object-cover" data-alt="professional male headshot for user profile avatar with clean neutral background and soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6QZugmRn07P9Ugg06HfhEHIDTVe6lV3EUGXt0N0y2hJLGYHLAH_zP3n4F3LCnJjGKG6jnp8dmFaiPMkemK8qs0E0KvbsrhBdfuyqIA6MLj6kAeYIubrdMjPjjJd7i-mXpemNHCMma-WEORwYdvyegm22_E1tQiEHCOUV2leJ6pOhjK3b5zwS57TEcuuoWW-0Nxym3SBXwyl7m9oC8VIsJjZsdAaMwg-0k97yToXGyFke6IQkvg8hE95HYDX9zQyVrqxCrMTY4wFc"/>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 px-container-margin max-w-2xl mx-auto">
+<!-- Hero Section -->
+<section class="mb-xl text-center md:text-left">
+<h2 class="font-h1 text-h1 text-on-surface mb-sm">Localize seu e-mail institucional</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                Acesse suas ferramentas educacionais rapidamente. Informe seus dados abaixo para recuperar o endereço de e-mail oficial da sua conta escolar.
+            </p>
+</section>
+<!-- Search Form Card -->
+<div class="bg-white rounded-xl shadow-[0_4px_12px_rgba(0,43,86,0.05)] p-lg border border-outline-variant/20">
+<form class="space-y-lg">
+<!-- Name Input -->
+<div class="space-y-xs">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase" for="student-name">Nome Completo do Aluno</label>
+<div class="relative group">
+<input class="w-full h-12 px-md bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary-container focus:border-primary-container outline-none transition-all font-body-lg" id="student-name" placeholder="Ex: João Silva Sauro" type="text"/>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-primary-container">person</span>
+</div>
+</div>
+<!-- Class Type Filter -->
+<div class="space-y-sm">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase">Modalidade de Ensino</label>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-sm">
+<label class="relative flex items-center justify-center p-md border border-slate-200 rounded-lg cursor-pointer hover:bg-surface-container-low transition-colors has-[:checked]:border-primary-container has-[:checked]:bg-surface-container-low">
+<input class="sr-only" name="class-type" type="radio" value="EJA"/>
+<span class="font-button text-button text-on-surface">EJA</span>
+</label>
+<label class="relative flex items-center justify-center p-md border border-slate-200 rounded-lg cursor-pointer hover:bg-surface-container-low transition-colors has-[:checked]:border-primary-container has-[:checked]:bg-surface-container-low">
+<input class="sr-only" name="class-type" type="radio" value="EM"/>
+<span class="font-button text-button text-on-surface">Ensino Médio</span>
+</label>
+<label class="relative flex items-center justify-center p-md border border-slate-200 rounded-lg cursor-pointer hover:bg-surface-container-low transition-colors has-[:checked]:border-primary-container has-[:checked]:bg-surface-container-low">
+<input class="sr-only" name="class-type" type="radio" value="EJA Médio"/>
+<span class="font-button text-button text-on-surface">EJA Médio</span>
+</label>
+</div>
+</div>
+<!-- CTA Button -->
+<button class="w-full h-14 bg-primary-container hover:bg-primary text-white font-button text-lg rounded-xl shadow-lg shadow-primary-container/20 active:scale-[0.98] transition-all flex items-center justify-center gap-sm" type="submit">
+<span class="material-symbols-outlined">search</span>
+                    Buscar E-mail
+                </button>
+</form>
+</div>
+<!-- Instructional Bento Grid -->
+<div class="mt-xl grid grid-cols-1 md:grid-cols-2 gap-md">
+<div class="bg-surface-container-low p-md rounded-xl border border-outline-variant/30">
+<div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center mb-sm shadow-sm">
+<span class="material-symbols-outlined text-primary-container">info</span>
+</div>
+<h3 class="font-h2 text-body-lg font-bold mb-xs">Onde encontro meu RA?</h3>
+<p class="font-body-sm text-on-surface-variant">Seu Registro de Aluno está impresso na sua carteirinha escolar ou boletim informativo.</p>
+</div>
+<div class="bg-slate-900 text-white p-md rounded-xl shadow-lg overflow-hidden relative">
+<div class="relative z-10">
+<div class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center mb-sm">
+<span class="material-symbols-outlined text-orange-400">help</span>
+</div>
+<h3 class="font-h2 text-body-lg font-bold mb-xs">Precisa de ajuda?</h3>
+<p class="font-body-sm text-slate-300">Entre em contato com a secretaria da sua unidade escolar.</p>
+</div>
+<!-- Decorative background element -->
+<div class="absolute -right-4 -bottom-4 w-24 h-24 bg-orange-500/10 rounded-full blur-2xl"></div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 h-20 pb-safe bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 shadow-[0_-4px_12px_rgba(0,0,0,0.05)] md:hidden">
+<a class="flex flex-col items-center justify-center text-[#FF5C00] font-bold active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">search</span>
+<span class="font-['Inter'] text-[12px] font-medium">Search</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 hover:text-[#FF5C00] transition-colors active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">history</span>
+<span class="font-['Inter'] text-[12px] font-medium">History</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 hover:text-[#FF5C00] transition-colors active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Inter'] text-[12px] font-medium">Profile</span>
+</a>
+</nav>
+<!-- Desktop Navigation Cluster (TopAppBar integration) -->
+<div class="hidden md:flex fixed top-0 left-1/2 -translate-x-1/2 h-16 items-center gap-lg z-[60]">
+<a class="text-white font-medium hover:text-orange-400 transition-colors" href="#">Busca</a>
+<a class="text-slate-400 font-medium hover:text-orange-400 transition-colors" href="#">Histórico</a>
+<a class="text-slate-400 font-medium hover:text-orange-400 transition-colors" href="#">Ajuda</a>
+</div>
+</body></html>

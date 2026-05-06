@@ -1,0 +1,36 @@
+# Dados sensíveis dos alunos
+alunos2.json
+alunos.json
+alunosLeft.json
+email's.pdf
+email's2.pdf
+# Variáveis de ambiente
+.env
+.env.local
+.env.*.local
+
+# Node modules
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Build
+dist/
+build/
+.next/
+.vercel/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class

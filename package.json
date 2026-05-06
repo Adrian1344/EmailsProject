@@ -1,0 +1,20 @@
+{
+  "name": "school-email-lookup",
+  "version": "1.0.0",
+  "description": "Ferramenta para buscar e-mails institucionales dos alunos",
+  "main": "api/search.js",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'No build required'",
+    "start": "node api/search.js"
+  },
+  "keywords": [
+    "school",
+    "email",
+    "lookup"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {}
+}
